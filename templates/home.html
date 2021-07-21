@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+  <div class="container">
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+      <!-- Navbar brand -->
+      <span class="navbar-brand">Productos</span>
+      
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+
+        <!-- Links -->
+
+
+      </div>
+      <!-- Collapsible content -->
+      
+
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Section: Products v.3-->
+    <section class="text-center mb-4">
+
+      <div class="row wow fadeIn">
+
+        {% for item in object_list %}
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="card">
+
+            <div class="view overlay">
+              {% comment %} <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
+                class="card-img-top" {% endcomment %} <img src="{{ item.image.url }}" width="100" height="300"
+                class="card-img-top">
+              <a href="{{ item.get_absolute_url }}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <div class="card-body text-center">
+              <a href="" class="grey-text">
+                <h5>{{ item.get_category_display }}</h5>
+              </a>
+              <h5>
+                <strong>
+                  <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
+                    <span class="badge badge-pill {{ item.get_label_display }}-color">Nuevo</span>
+                  </a>
+                </strong>
+              </h5>
+
+              <h4 class="font-weight-bold blue-text">
+                <strong>$
+                  {% if item.discount_price %}
+                  {{ item.discount_price }}
+                  {% else %}
+                  {{ item.price }}
+                  {% endif %}
+                </strong>
+              </h4>
+
+            </div>
+
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+
+    </section>
+    <!--Section: Products v.3-->
+
+    <!--Pagination-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-8 mt-3 mb5">
+
+
+      <span class="navbar-brand">Suscripción</span>
+      
+ <div class="card">
+
+ <div class="view overlay">
+
+    <div class="card-body text-center">
+
+    <a href="" class="grey-text">
+                <h5>{{ item.get_category_display }}</h5>
+              </a>
+              <h5>
+              <strong>
+
+    <div data-current-plan-text="Tu plan actual" data-event-campaign-id="default" data-event-offer-type-id="trial-1m" data-component-name="STOREFRONT-PLAN" data-component-position="0" data-component-type="product" data-event-in-view="true" class="sc-biHcxt sc-bxLXlR dEEnSq bEqEIt" data-gtm-vis-recent-on-screen-154771_2580="14520" data-gtm-vis-first-on-screen-154771_2580="14520" data-gtm-vis-total-visible-time-154771_2580="100" data-gtm-vis-has-fired-154771_2580="1"><ul class="sc-gJjCVn jSYvfE"><li class="sc-iqAclL jVYQsX"><span>1 día de prueba</span></li><li color="#2e77d0" backgroundcolor="#ffffff" bordervalues="[object Object]" class="sc-iqAclL bwqLjS"><span>Hasta 2 cuentas</span></li></ul><h3 class="Type__TypeElement-sc-9snywk-0 cFcPTK sc-bA-DTon IPtEP">Plan PRO</h3><p class="sc-jVSGNQ hzsGOz">Después del periodo de prueba, $&nbsp;9.950,00 al mes</p><hr class="sc-fnebDD bAGyCr"></div>
+<ul class="sc-biHcxt sc-jfkLlK dEEnSq cJjKLs"><li class="sc-dHMioH jeOpiX"><div stroke-width="1" aria-hidden="true" class="sc-kEqXSa fAyluN"><svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label="" class="Svg-sc-1usfroi-0 kcaoHR"><polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818"></polyline></svg></div><p class="sc-QxirK fWxumN">Puedes pedir arreglos florales exclusivos para ti</p></li><li class="sc-dHMioH jeOpiX"><div stroke-width="1" aria-hidden="true" class="sc-kEqXSa fAyluN"><svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label="" class="Svg-sc-1usfroi-0 kcaoHR"><polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818"></polyline></svg></div><p class="sc-QxirK fWxumN">Obtén descuentos de hasta el 50% en algunas de tus compras</p><div stroke-width="1" aria-hidden="true" class="sc-kEqXSa fAyluN"></div></li></ul>
+<div data-event-campaign-id="default" data-event-offer-type-id="trial-1m" data-component-name="STOREFRONT-PLAN" data-component-position="0" data-component-type="product" class="sc-biHcxt sc-irqbAE dEEnSq eOCmmT" data-gtm-vis-has-fired-154771_2580="1"><div><a aria-label="Finalizar la compra del plan Premium Individual" href="http://127.0.0.1:8000/accounts/signup/" tabindex="0" class="Button-sc-8cs45s-0 hDkiPl"><div class="ButtonInner-peijbp-0 clbxiv sc-jrsJWt sc-iuhXDa cyTDyE dBEucF"><span>COMENZAR</span></div><div class="ButtonFocus-tupyzb-0 clyQKv"></div></a></div></div>
+<div><a aria-label="Finalizar la compra del plan PRO" href="http://127.0.0.1:8000/accounts/signup/" tabindex="0" class="Button-sc-8cs45s-0 hDkiPl"><div class="ButtonFocus-tupyzb-0 clyQKv"></div></a></div>
+<div class="sc-biHcxt sc-jcsPjo dEEnSq iLRGtE">Se aplican Términos y Condiciones.</a> El día de prueba no está disponible para los usuarios que ya tengan suscripción.</p></div>
+
+<a href="#victorModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Suscribirse</a>
+ <div id="victorModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>¡Felicidades te has suscrito exitosamente!</p>
+                <p class="text-warning"><small>Recibiras un descuento del 10% en tu proxima compra</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-verde" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    {% if is_paginated %}
+    <nav class="d-flex justify-content-center wow fadeIn">
+      <ul class="pagination pg-blue">
+
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        {% endif %}
+
+        <li class="page-item active">
+          <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+    {% endif %}
+
+  </div>
+</main>
+
+{% endblock content %}
